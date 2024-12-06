@@ -6,6 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BF4749982D034E6B0006310A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BF47497E2D034B1C0006310A /* OpenSSL340Test Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenSSL340Test Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -14,6 +27,11 @@
 		BF4749802D034B1C0006310A /* OpenSSL340Test Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "OpenSSL340Test Watch App";
+			sourceTree = "<group>";
+		};
+		BF47499B2D03571D0006310A /* Frameworks */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +50,7 @@
 		BF4749752D034B1C0006310A = {
 			isa = PBXGroup;
 			children = (
+				BF47499B2D03571D0006310A /* Frameworks */,
 				BF4749802D034B1C0006310A /* OpenSSL340Test Watch App */,
 				BF47497F2D034B1C0006310A /* Products */,
 			);
@@ -55,6 +74,7 @@
 				BF47497A2D034B1C0006310A /* Sources */,
 				BF47497B2D034B1C0006310A /* Frameworks */,
 				BF47497C2D034B1C0006310A /* Resources */,
+				BF4749982D034E6B0006310A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -62,6 +82,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				BF4749802D034B1C0006310A /* OpenSSL340Test Watch App */,
+				BF47499B2D03571D0006310A /* Frameworks */,
 			);
 			name = "OpenSSL340Test Watch App";
 			packageProductDependencies = (
@@ -82,6 +103,7 @@
 				TargetAttributes = {
 					BF47497D2D034B1C0006310A = {
 						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -244,12 +266,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenSSL340Test Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 3X69W4AQD6;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Frameworks/OpenSSL.xcframework";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Frameworks/OpenSSL.xcframework/**";
 				INFOPLIST_KEY_CFBundleDisplayName = OpenSSL340Test;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
@@ -263,9 +288,12 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Frameworks/OpenSSL.xcframework/**";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenSSL340Test Watch App/OpenSSL340Test Watch App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Debug;
 		};
@@ -274,12 +302,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenSSL340Test Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 3X69W4AQD6;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Frameworks/OpenSSL.xcframework";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Frameworks/OpenSSL.xcframework/**";
 				INFOPLIST_KEY_CFBundleDisplayName = OpenSSL340Test;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
@@ -293,10 +324,12 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Frameworks/OpenSSL.xcframework/**";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenSSL340Test Watch App/OpenSSL340Test Watch App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Release;
 		};
